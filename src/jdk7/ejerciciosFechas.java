@@ -25,7 +25,9 @@ public class ejerciciosFechas {
 //  -02-01-16 09:01:55
 //  -mar 2 febrero 2016.
         
-//Escriba la fecha en formato español y en formato americano
+//      Escriba la fecha completa en formato:
+//      a) En formato americano
+//      b) español (creando una localizacion)
 
     }
 
