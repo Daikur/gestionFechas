@@ -12,14 +12,17 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
 
-public class ejercicio7 {
+/**
+ *
+ * @author daw1
+ */
+public class ejercicioFechasResuelto {
 
     public static void main(String[] args) {
         Date hoy = new Date();
         GregorianCalendar gr = new GregorianCalendar();
 
-// Ejercicio 7
-        //a
+//      Hoy es 12 Martes de Febrero del 2016.
         int dia = gr.get(GregorianCalendar.DAY_OF_MONTH);
         int mes = gr.get(GregorianCalendar.DAY_OF_MONTH);
         int anyo = gr.get(GregorianCalendar.YEAR);
@@ -32,47 +35,29 @@ public class ejercicio7 {
             "agosto", "septiembre", "octubre", "noviembre", "diciembre"};
 
         System.out.println("Hoy es " + diasS[dia] + ", día " + dia + " de " + mesA[gr.get(Calendar.MONTH)] + " del año " + anyo + " y son las " + hora + ":" + minutos + ".");
-
-        //b   
-        DateFormat formato_2 = new SimpleDateFormat("dd-MM-yy");
+//      02-01-16 09:01:55
+        DateFormat formato_2 = new SimpleDateFormat("dd-MM-yy HH:MM:ss");
         String fechaL = formato_2.format(hoy);
         System.out.println(fechaL);
 
-        //c
-        DateFormat formato_3 = new SimpleDateFormat("yyyy.MM.yy H:m:s:S");
+//       mar 2 febrero 2016.
+        DateFormat formato_3 = new SimpleDateFormat("EE d MMMM YYYY.");
         fechaL = formato_3.format(hoy);
         System.out.println(fechaL);
 
-        //d
-        DateFormat formato_4 = new SimpleDateFormat("EEEE,MMM d,''yy");
-        fechaL = formato_4.format(hoy);
-        System.out.println(fechaL);
-
-        //e
-        DateFormat formato_5 = new SimpleDateFormat("K:mm a");
-        fechaL = formato_5.format(hoy);
-        System.out.println(fechaL);
-
-        //f
-        DateFormat formato_6 = new SimpleDateFormat("H:m:s:S");
-        fechaL = formato_6.format(hoy);
-        System.out.println(fechaL);
-
-        //6
-        DateFormat formato_7 = new SimpleDateFormat("yyyy.MMMM.dd H:m");
-        fechaL = formato_7.format(hoy);
-        System.out.println(fechaL);
-
-        //prueba
-        Locale fEspañol = new Locale("es", "ES", "Traditional WIN");
-        DateFormat formatF
-                = DateFormat.getDateInstance(DateFormat.FULL, fEspañol);
-        String fecha = formatF.format(hoy);
-
-        //
-        DateFormat formateador = DateFormat.getDateInstance(DateFormat.MEDIUM, Locale.ITALIAN);
+//      Escriba la fecha completa en formato:
+//      a) En formato americano
+//      b) español (creando una localizacion)
+//        a)
+        DateFormat formateador = DateFormat.getDateInstance(DateFormat.FULL, Locale.US);
         fechaL = formateador.format(hoy);
-        System.out.println("Fecha media: " + fechaL);
+        System.out.println(fechaL);
+
+//        b)
+        Locale fEsp = new Locale("es", "ES", "Traditional_WIN");
+
+        fechaL = DateFormat.getDateInstance(DateFormat.FULL, fEsp).format(hoy);
+        System.out.println(fechaL);
 
     }
 

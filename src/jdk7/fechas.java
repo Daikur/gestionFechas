@@ -28,18 +28,18 @@ public class fechas {
         GregorianCalendar d3 = new GregorianCalendar();
         d3.setTime(hoy);
         int anyo = d3.get(GregorianCalendar.YEAR);
-        System.out.println("año "+anyo);
+        System.out.println("año " + anyo);
         int mes = d3.get(GregorianCalendar.MONTH);
-        System.out.println("mes "+mes);
+        System.out.println("mes " + mes);
         int dia = d3.get(GregorianCalendar.DAY_OF_MONTH);
-        System.out.println("dia "+dia);
+        System.out.println("dia " + dia);
         int dia_semana = d3.get(GregorianCalendar.DAY_OF_WEEK);
         System.out.println(dia_semana);
         new SimpleDateFormat("HH:mm:ss");
         int hora = d3.get(GregorianCalendar.HOUR);
         int min = d3.get(GregorianCalendar.MINUTE);
-        
-        System.out.println(hora+":"+min);
+
+        System.out.println(hora + ":" + min);
 
         d3.add(GregorianCalendar.YEAR, 3);
         Date d4 = d3.getTime();
@@ -51,7 +51,7 @@ public class fechas {
         //a
         DateFormat formatF1 = DateFormat.getDateInstance(DateFormat.FULL);
         String formato2_fecha = formatF1.format(hoy);
-        System.out.println("a: "+formato2_fecha);
+        System.out.println("a: " + formato2_fecha);
 
         Locale fEspañol = new Locale("es", "ES", "Traditional WIN");
         DateFormat formatF3 = DateFormat.getDateInstance(DateFormat.FULL, fEspañol);
