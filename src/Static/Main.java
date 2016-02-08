@@ -19,6 +19,11 @@ public class Main {
         JugadoresFutbol j5 = new JugadoresFutbol(274);
 
         System.out.println(JugadoresFutbol.num_jugadores());
+              
+        System.out.println(Circulo.area(2));
+        System.out.println(Circulo.diametro(2));
+        System.out.println(Circulo.perimetro(2));
+        
         
     }
 

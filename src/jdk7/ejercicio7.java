@@ -20,18 +20,18 @@ public class ejercicio7 {
 
 // Ejercicio 7
         //a
-        int dia = gr.get(GregorianCalendar.DAY_OF_MONTH);
-        int mes = gr.get(GregorianCalendar.DAY_OF_MONTH);
-        int anyo = gr.get(GregorianCalendar.YEAR);
-        int hora = gr.get(GregorianCalendar.HOUR);
-        int minutos = gr.get(GregorianCalendar.MINUTE);
-
-        String diasS[] = {"domingo", "lunes", "martes", "miercoles", "jueves", "viernes", "sabado"};
-
-        String mesA[] = {"enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
-            "agosto", "septiembre", "octubre", "noviembre", "diciembre"};
-
-        System.out.println("Hoy es " + diasS[dia] + ", día " + dia + " de " + mesA[gr.get(Calendar.MONTH)] + " del año " + anyo + " y son las " + hora + ":" + minutos + ".");
+//        int dia = gr.get(GregorianCalendar.DAY_OF_MONTH);
+//        int mes = gr.get(GregorianCalendar.DAY_OF_MONTH);
+//        int anyo = gr.get(GregorianCalendar.YEAR);
+//        int hora = gr.get(GregorianCalendar.HOUR);
+//        int minutos = gr.get(GregorianCalendar.MINUTE);
+//
+//        String diasS[] = {"domingo", "lunes", "martes", "miercoles", "jueves", "viernes", "sabado"};
+//
+//        String mesA[] = {"enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
+//            "agosto", "septiembre", "octubre", "noviembre", "diciembre"};
+//
+//        System.out.println("Hoy es " + diasS[dia] + ", día " + dia + " de " + mesA[gr.get(Calendar.MONTH)] + " del año " + anyo + " y son las " + hora + ":" + minutos + ".");
 
         //b   
         DateFormat formato_2 = new SimpleDateFormat("dd-MM-yy");
@@ -44,7 +44,7 @@ public class ejercicio7 {
         System.out.println(fechaL);
 
         //d
-        DateFormat formato_4 = new SimpleDateFormat("EEEE,MMM d,''yy");
+        DateFormat formato_4 = new SimpleDateFormat("EE,MMM d,''yy");
         fechaL = formato_4.format(hoy);
         System.out.println(fechaL);
 
@@ -66,7 +66,7 @@ public class ejercicio7 {
         //prueba
         Locale fEspañol = new Locale("es", "ES", "Traditional WIN");
         DateFormat formatF
-                = DateFormat.getDateInstance(DateFormat.FULL, fEspañol);
+                = DateFormat.getDateInstance(DateFormat.SHORT, fEspañol);
         String fecha = formatF.format(hoy);
 
         //
