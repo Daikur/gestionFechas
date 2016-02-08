@@ -9,12 +9,12 @@ import java.time.format.DateTimeFormatter;
 public class ejercicio7 {
 
     public static void main(String[] args) {
-        //a. “Hoy es Viernes, día 15 de Enero del año 2016 y son las 13:30”.
         LocalDate hoy = LocalDate.now();
         LocalTime ahora = LocalTime.now();
         LocalDateTime h = LocalDateTime.now();
+        //a. “Hoy es Viernes, día 15 de Enero del año 2016 y son las 13:30”.
+
         DayOfWeek dia_Semana = hoy.getDayOfWeek();
-        System.out.println("dia semana: " + dia_Semana);
         int dia = hoy.getDayOfMonth();
         int mes = hoy.getMonthValue() - 1;
         String mesA[] = {"enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
@@ -23,7 +23,7 @@ public class ejercicio7 {
         int hora = ahora.getHour();
         int minutos = ahora.getMinute();
 
-        System.out.println("Hoy es Viernes, día " + dia + " de " + mesA[mes] + " del año " + anyo + " y son las " + hora + ":" + minutos + ".");
+        System.out.println("Hoy es " + dia_Semana + ", día " + dia + " de " + mesA[mes] + " del año " + anyo + " y son las " + hora + ":" + minutos + ".");
 
         //b. 15-01-16
         DateTimeFormatter b = DateTimeFormatter.ofPattern("dd-MM-yy");
