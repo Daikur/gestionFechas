@@ -5,7 +5,6 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Month;
 import java.time.format.DateTimeFormatter;
-import static javax.print.attribute.Size2DSyntax.MM;
 
 public class pruebas {
 
@@ -14,7 +13,9 @@ public class pruebas {
         LocalDate hoy = LocalDate.now();
         System.out.println(hoy);
 
-        System.out.println(hoy.getMonth());
+        //Hora
+        LocalTime hora = LocalTime.now();
+        System.out.println(hora);
 
         //Crear tus propias fechas (YYY-MM-DD)
         LocalDate fechaTope = LocalDate.of(2013, Month.DECEMBER, 12);
@@ -28,20 +29,29 @@ public class pruebas {
         LocalDateTime instante = LocalDateTime.now();
         System.out.println(instante);
 
-        //Trabajar con fechas
+        //Trabajar con fechas (Antes, igual, despues..)
         if (hoy.isBefore(fechaTope)) {
             System.out.println("Has llegado tarde");
         }
 
+        //Sumar años a una fecha
         LocalDate devolucion = hoy.plusWeeks(2).plusYears(2);
         System.out.println(devolucion);
-        
-        String fechaFormateada = hoy.format(DateTimeFormatter.ISO_DATE);
-        
+
+        //formatear fecha a un formato predefinido
+        String fechaFormateada = instante.format(DateTimeFormatter.ISO_ORDINAL_DATE);
+        System.out.println("fecha formateada: " + fechaFormateada);
+
+        //Formatear fecha por patron
         DateTimeFormatter patron = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         String fecha = hoy.format(patron);
-        String fecha1 = hoy.format(patron);
-        System.out.println(fecha1);
+        System.out.println(fecha);
+
+        //Pasar una fecha de String a LocalDate
+        DateTimeFormatter patron1 = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+        String fecha1 = "2015/12/24";
+        LocalDate fecha2 = LocalDate.parse(fecha1, patron1);
+        System.out.println("fecha 2: " + fecha2);
     }
 
 }
