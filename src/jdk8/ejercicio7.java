@@ -23,8 +23,10 @@ public class ejercicio7 {
         int hora = ahora.getHour();
         int minutos = ahora.getMinute();
 
-        System.out.println("Hoy es " + dia_Semana + ", día " + dia + " de " + mesA[mes] + " del año " + anyo + " y son las " + hora + ":" + minutos + ".");
-
+        //System.out.println("Hoy es " + dia_Semana + ", día " + dia + " de " + mesA[mes] + " del año " + anyo + " y son las " + hora + ":" + minutos + ".");
+        DateTimeFormatter a = DateTimeFormatter.ofPattern("'Hoy es' eee, 'día' dd 'de' MM 'del año' yyyy 'y son las 'HH':'mm");
+        String fechaa = hoy.format(a);
+        System.out.println(fechaa);
         //b. 15-01-16
         DateTimeFormatter b = DateTimeFormatter.ofPattern("dd-MM-yy");
         String fechaB = hoy.format(b);
